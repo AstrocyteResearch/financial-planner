@@ -6,10 +6,6 @@ build-backend = "flit_core.buildapi"
 module = "financial_planner"
 author = "Astrocyte Research, Inc"
 author-email = "support@astrocyte.io"
-home-page = "https://astrocyte.io"
+home-page = "https://github.com/AstrocyteResearch/financial-planner"
 classifiers = ["License :: OSI Approved :: Apache Software License"]
-
-[pypi]
-username = "closedloop"
-password = "pypi-AgEIcHlwaS5vcmcCJDZmZGM0YzY0LWU5OWItNDRjMy05ODQ2LWU3OWI2ZmYwNjgwYgACJXsicGVybWlzc2lvbnMiOiAidXNlciIsICJ2ZXJzaW9uIjogMX0AAAYgTJY11WivYnfGCyiOEIbXqQT_2urDWjhxTKMMDBOcCPY"
 
