@@ -1,0 +1,11 @@
+[build-system]
+requires = ["flit_core >=2,<3"]
+build-backend = "flit_core.buildapi"
+
+[tool.flit.metadata]
+module = "financial_planner"
+author = "Astrocyte Research, Inc"
+author-email = "support@astrocyte.io"
+home-page = "https://astrocyte.io"
+classifiers = ["License :: OSI Approved :: Apache Software License"]
+
