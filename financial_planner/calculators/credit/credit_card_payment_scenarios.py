@@ -239,15 +239,17 @@ class CreditCardScenario(object):
         months_to_paydown_99pct = (ts['total_cc_balance'] > initial_balance * 0.01).sum()
 
         return {
-            'scenario_name': name,
-            'initial_balance': initial_balance,
-            'payments_sum': payments_sum,
-            'payments_sum_pv': payments_sum_pv,
-            'months_to_paydown': months_to_paydown,
-            'months_to_paydown_85pct': months_to_paydown_85pct,
-            'months_to_paydown_95pct': months_to_paydown_95pct,
-            'months_to_paydown_99pct': months_to_paydown_99pct,
-            'late_fees': ts.late_fees.sum(),
-            'missed_payments': ts.missed_payments.sum(),
+            'name': name,
+            'values': {
+                'initial_balance': initial_balance,
+                'payments_sum': payments_sum,
+                'payments_sum_pv': payments_sum_pv,
+                'months_to_paydown': months_to_paydown,
+                'months_to_paydown_85pct': months_to_paydown_85pct,
+                'months_to_paydown_95pct': months_to_paydown_95pct,
+                'months_to_paydown_99pct': months_to_paydown_99pct,
+                'late_fees': ts.late_fees.sum(),
+                'missed_payments': ts.missed_payments.sum()
+            },
             'ts': self._ts_to_dict(self.ts)
         }
