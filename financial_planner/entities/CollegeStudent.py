@@ -12,23 +12,23 @@ class CollegeStudent:
         self.age = age
         self.gender = gender
         self.name = name
-        self.Ann_Expense = {}
-        self.Ann_Income = {}
+        self.ann_Expense = {}
+        self.ann_Income = {}
 
     def add_Expense(self, Expense, genre):
-        self.Ann_Expense[genre] = Expense
+        self.ann_Expense[genre] = Expense
 
     def add_Income(self, Income, genre):
-        self.Ann_Income[genre] = Income
+        self.ann_Income[genre] = Income
 
     @property
-    def Annual_Expense(self):
-        return np.sum([amount for amount in self.Ann_Expense.values()])
+    def annual_Expense(self):
+        return np.sum([amount for amount in self.ann_Expense.values()])
 
     @property
-    def Annual_Income(self):
-        return np.sum([amount for amount in self.Ann_Income.values()])
+    def annual_Income(self):
+        return np.sum([amount for amount in self.ann_Income.values()])
 
     @property
-    def Annual_Net_Expense(self):
-        return self.Annual_Expense - self.Annual_Income
+    def annual_Net_Expense(self):
+        return self.annual_Expense - self.annual_Income
