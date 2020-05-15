@@ -46,7 +46,7 @@ class Life_insurance():
         elif len(inflation_rate) >= required_years :
             self.inflation_rate = np.array(inflation_rate[:required_years])
         else :
-            print('Error: inflation rate should be a constant or match required years')
+            raise Exception('Error: inflation rate should be a constant or match required years')
         
         self.wage_growth_rate = wage_growth_rate
         self.term_structure = term_structure
@@ -126,6 +126,10 @@ if __name__ == '__main__':
     infl = [0.01, 0.02, 0.01, 0.01, 0.02, 0.011, 0.015, 0.014, 0.008, 0.007]
     L = Life_insurance(1000,0.5,10,infl,0.02,0)
     L.result_display()
+    
+    # rause exception
+    L = Life_insurance(1000,0.5,10,[0.10,0.1],0.02,0)
+
 
 
 
