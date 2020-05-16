@@ -72,7 +72,7 @@ class Life_insurance():
         future_min_required_cashflow = current_min_required_amount * self.inflation_factor()
         present_value = sum(future_min_required_cashflow * self.discount_factor())
         min_required_amount = present_value + self.one_time_expenses
-        print('The minimum amount of insurance needed in order to fit the minimum needs of dependents (in               case some accidents happen tommorow) plus some one-time expenses is $%.2f. \n' % min_required_amount)
+        print('The minimum amount of insurance needed in order to fit the minimum needs of dependents (in case some accidents happen tommorow) plus some one-time expenses is $%.2f. \n' % min_required_amount)
         return min_required_amount
     
     def perfect_replication_amount(self):
@@ -82,7 +82,7 @@ class Life_insurance():
         wage_cashflow = self.current_annual_income * np.array([(1+self.wage_growth_rate)**(n+1) for n in range(self.required_years)])
         present_value = sum(wage_cashflow * self.discount_factor())
         replication_amount = present_value + self.one_time_expenses
-        print('The amount of insurance needed in order to fully replicate the future wage cashflow (in               case some accidents happen tommorow) plus some one-time expenses is $%.2f. \n' %  replication_amount)
+        print('The amount of insurance needed in order to fully replicate the future wage cashflow (in case some accidents happen tommorow) plus some one-time expenses is $%.2f. \n' %  replication_amount)
         return replication_amount
     
     def keep_current_living_standard_amount(self):
@@ -92,7 +92,7 @@ class Life_insurance():
         required_cashflow = self.current_annual_income * self.inflation_factor()
         present_value = sum(required_cashflow * self.discount_factor())
         required_amount = present_value + self.one_time_expenses
-        print('The amount of insurance needed in order to keep current living standard (in case              some accidents happen tommorow) plus some one-time expenses is %.2f. \n' % required_amount )
+        print('The amount of insurance needed in order to keep current living standard (in case some accidents happen tommorow) plus some one-time expenses is %.2f. \n' % required_amount )
         return required_amount
     
     def result_display(self):

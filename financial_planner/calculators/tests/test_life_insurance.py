@@ -8,7 +8,7 @@ email   : jcdan@bu.edu
 """
 
 import unittest
-from financial_planner.calculators.credit.life_insurance import Life_insurance
+from financial_planner.calculators.life_insurance import Life_insurance
 
 class Life_Insurance_Test_Case(unittest.TestCase):
     
