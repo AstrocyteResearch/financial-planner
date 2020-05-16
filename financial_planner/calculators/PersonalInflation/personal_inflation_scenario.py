@@ -43,8 +43,8 @@ class Cpi_Data:
         self.time = datetime.fromtimestamp(time.time())
         self.year = self.time.year
         self.category = list(self.basket['API_code'].keys())
-        self.get_cpi_data()
         self.test=test
+        self.get_cpi_data()
 
 
     def get_cpi_data(self):
@@ -94,7 +94,7 @@ class PersonalInflationScenario:
         cpi_inflation = np.sum(df['item_chg']*df['weights'])
         self_inflation = np.sum(df['item_chg']*df['personal'])
 
-        df.loc['Inflation Rate'] = [None, cpi_inflation, self_inflation]
+        df.loc['Inflation Rate'] = [0, cpi_inflation, self_inflation]
         df.columns = ['Price_change','CPI_weights','Personal_weights']
 
         return df
