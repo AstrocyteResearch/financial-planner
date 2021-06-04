@@ -20,7 +20,7 @@ setup(name='financial_planner',
 #        'financial_planner'
 #      ],
       packages=find_packages(),
-      install_requires=[],
+      install_requires=['pyliferisk'],
       include_package_data=True,
       long_description=open('README.md').read(),
       zip_safe=False)
